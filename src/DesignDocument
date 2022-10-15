@@ -4,10 +4,13 @@ LinearEquation Class
         private int y1 - y value of first coordinate
         private int x2 - x value of second coordinate
         private int y2 - y value of second coordinate
-        private double slope
-        private double yInt
-        private double inverse
+        private int rise;
+        private int run;
+        private double slope;
+        private double yInt;
+        private double inverse;
         private double distance;
+        private String info;
 
     Constructor:
         public LinearEquation(int x1, int y1, int x2, int y2)
@@ -19,7 +22,7 @@ LinearEquation Class
 
         public double calculateSlope
 
-        public double yInt()
+        public double yInt() - calculates the y intercept
 
         public String toString() - returns all the relevant info
             - slope of line (double)

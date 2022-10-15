@@ -12,22 +12,22 @@ public class LinearEquation {
     private String info;
 
     //constructor
-    public LinearEquation(int x1, int y1, int x2, int y2)
+    public LinearEquation(int xOne, int yOne, int xTwo, int yTwo)
     {
-        this.x1 = x1;
-        this.y1 = y1;
-        this.x2 = x2;
-        this.y2 = y2;
+        x1 = xOne;
+        y1 = yOne;
+        x2 = xTwo;
+        y2 = yTwo;
     }
 
     //method
-    public String pointOne(int x1, int y1)
+     public String pointOne(int xUno, int yUno)
     {
-        return "(" + x1 + "," +  y1 + ")";
+        return "(" + xUno + "," +  yUno + ")";
     }
-    public String pointTwo(int x2, int y2)
+    public String pointTwo(int xDos, int yDos)
     {
-        return "(" + x2 + "," +  y2 + ")";
+        return "(" + xDos + "," +  yDos + ")";
     }
 
     public double calculateSlope()
@@ -50,9 +50,15 @@ public class LinearEquation {
         return "y = " + slope + "x " + "+ " + yInt;
     }
 
+    public double getDistance()
+    {
+        distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        return distance;
+    }
+
     public String toString()
     {
-        info = "Slope of Line: " + calculateSlope() + "\nY-intercept: " + yInt();
+        info = "Slope of Line: " + calculateSlope() + "\nY-intercept: " + yInt() + "\nSlope Intercept Form: " + slopeIntForm() + "\nDistance Between Coordinates: " + String.format("%.2f",getDistance());
         return info;
     }
 
