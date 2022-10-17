@@ -21,15 +21,6 @@ public class LinearEquation {
     }
 
     //method
-     public String pointOne(int xUno, int yUno)
-    {
-        return "(" + xUno + "," +  yUno + ")";
-    }
-    public String pointTwo(int xDos, int yDos)
-    {
-        return "(" + xDos + "," +  yDos + ")";
-    }
-
     public double calculateSlope()
     {
         rise = y2 - y1;
@@ -47,7 +38,7 @@ public class LinearEquation {
 
     public String slopeIntForm()
     {
-        return "y = " + slope + "x " + "+ " + yInt;
+        return "y = " + String.format("%.2f", slope) + "x " + "+ " + String.format("%.2f", yInt);
     }
 
     public double getDistance()
@@ -58,7 +49,7 @@ public class LinearEquation {
 
     public String toString()
     {
-        info = "Slope of Line: " + calculateSlope() + "\nY-intercept: " + yInt() + "\nSlope Intercept Form: " + slopeIntForm() + "\nDistance Between Coordinates: " + String.format("%.2f",getDistance());
+        info = "\nSlope of Line: " + String.format("%.2f", calculateSlope()) + "\nY-intercept: " + String.format("%.2f", yInt()) + "\nSlope Intercept Form: " + slopeIntForm() + "\nDistance Between Coordinates: " + String.format("%.2f", getDistance());
         return info;
     }
 

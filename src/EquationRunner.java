@@ -4,14 +4,26 @@ public class EquationRunner {
         Scanner s = new Scanner(System.in);
         System.out.print("Please enter your first coordinate: ");
         String pointOne = s.nextLine();
-        /*System.out.print("Please enter your second coordinate: ");
+        System.out.print("Please enter your second coordinate: ");
         String pointTwo = s.nextLine();
-        System.out.println("First Pair: " + pointOne);
-        System.out.println("Second Pair: " + pointTwo); */
+        System.out.println("First Coordinate: " + pointOne);
+        System.out.print("Second Coordinate: " + pointTwo);
 
+        String xOne = pointOne.substring(1, pointOne.indexOf(","));
+        String yOne = pointOne.substring(pointOne.indexOf(",") + 1, pointOne.indexOf(")"));
+        String xTwo = pointTwo.substring(1, pointTwo.indexOf(","));
+        String yTwo = pointTwo.substring(pointTwo.indexOf(",") + 1, pointTwo.indexOf(")"));
+        int x1 = Integer.valueOf(xOne);
+        int y1 = Integer.valueOf(yOne);
+        int x2 = Integer.valueOf(xTwo);
+        int y2 = Integer.valueOf(yTwo);
 
-
-        LinearEquation one = new LinearEquation(1, 3,3,8);
+        LinearEquation one = new LinearEquation(x1, y1, x2, y2);
         System.out.println(one.toString());
+
+        System.out.println("Enter an x-value: ");
+        String xThree = s.nextLine();
+        double x3 = Double.valueOf(xThree);
+        double y3 = (((double)y2 - y1)/((double)x2 - x1)) * (x3);
     }
 }
