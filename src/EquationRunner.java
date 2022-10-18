@@ -21,9 +21,10 @@ public class EquationRunner {
         LinearEquation one = new LinearEquation(x1, y1, x2, y2);
         System.out.println(one.toString());
 
-        System.out.println("Enter an x-value: ");
+        System.out.print("Enter an x-value: ");
         String xThree = s.nextLine();
         double x3 = Double.valueOf(xThree);
-        double y3 = (((double)y2 - y1)/((double)x2 - x1)) * (x3);
+        double y3 = (((double)y2 - y1)/((double)x2 - x1)) * (x3) + (((((double)y2 - y1)/((double)x2 - x1)) * x1 * -1) + y1);
+        System.out.print("(" + x3 + ", " + String.format("%.2f", y3) + ")");
     }
 }
