@@ -16,9 +16,6 @@ LinearEquation Class
         public LinearEquation(int x1, int y1, int x2, int y2)
 
     Method:
-        public int pointOne(int x1, int y1) - stores the value of first coordinate
-
-        public int pointTwo(int x2, int y2) - stores the value of second coordinate
 
         public double calculateSlope
 
