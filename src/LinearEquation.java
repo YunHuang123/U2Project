@@ -38,7 +38,7 @@ public class LinearEquation {
 
     public String slopeIntForm()
     {
-        return "y = " + String.format("%.2f", slope) + "x " + "+ " + String.format("%.2f", yInt);
+        return "y = " + rise + "/" + run + "x " + "+ " + String.format("%.2f", yInt);
     }
 
     public double getDistance()
